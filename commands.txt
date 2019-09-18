@@ -1,0 +1,5 @@
+node grocery add --item=<GroceryName> --price=10
+(in case GroceryName exist  then price should be increase by input price)
+node grocery remove --item=<GroceryName>
+node grocery print
+node grocery priceOf --item=<GroceryName>

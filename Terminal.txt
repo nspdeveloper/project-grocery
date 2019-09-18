@@ -1,0 +1,106 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+PS D:\Project\Node js\grocery> node grocery
+welcome
+PS D:\Project\Node js\grocery> npm install yargs --save
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN project-grocery@1.0.0 No repository field.
+
++ yargs@14.0.0
+added 26 packages from 9 contributors and audited 41 packages in 5.139s
+found 0 vulnerabilities
+
+PS D:\Project\Node js\grocery> node grocery remove --item=<GroceryName>
+welcome on grocery system
+going to remove Grocery <GroceryName>
+PS D:\Project\Node js\grocery> node grocery remove --item=<GroceryName>
+welcome on grocery system
+going to remove Grocery <GroceryName>
+PS D:\Project\Node js\grocery> node grocery remove --item=apple
+welcome on grocery system
+going to remove Grocery apple
+PS D:\Project\Node js\grocery> node grocery add --item=apple --price=30
+welcome on grocery system
+going to add Grocery apple
+D:\Project\Node js\grocery\grocery.js:15
+        console.log(groceryCommands.add(groceryItem, groceryItemPrice));
+                                    ^
+
+TypeError: groceryCommands.add is not a function
+    at Object.<anonymous> (D:\Project\Node js\grocery\grocery.js:15:37)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:831:12)
+    at startup (internal/bootstrap/node.js:283:19)
+    at bootstrapNodeJSCore (internal/bootstrap/node.js:622:3)
+PS D:\Project\Node js\grocery> node grocery add --item=apple --price=30
+welcome on grocery system
+going to add Grocery apple
+adding
+undefined
+PS D:\Project\Node js\grocery> node grocery add --item=apple --price=30
+welcome on grocery system
+going to add Grocery apple
+D:\Project\Node js\grocery\commands.js:7
+    let indexOfGrocery = list.findIndex((x) => x.item == item);
+                              ^
+
+TypeError: Cannot read property 'findIndex' of undefined
+    at Object.add (D:\Project\Node js\grocery\commands.js:7:31)
+    at Object.<anonymous> (D:\Project\Node js\grocery\grocery.js:16:41)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:831:12)
+    at startup (internal/bootstrap/node.js:283:19)
+    at bootstrapNodeJSCore (internal/bootstrap/node.js:622:3)
+PS D:\Project\Node js\grocery> node grocery add --item=apple --price=30
+welcome on grocery system
+going to add Grocery apple
+undefined
+File as been written
+PS D:\Project\Node js\grocery> node grocery add --item=apple --price=30
+welcome on grocery system
+going to add Grocery apple
+undefined
+File as been written
+PS D:\Project\Node js\grocery> node grocery add --item=apple --price=30
+welcome on grocery system
+going to add Grocery apple
+undefined
+File as been written
+PS D:\Project\Node js\grocery> node grocery add --item=apple --price=30
+welcome on grocery system
+[ { item: 'apple', price: 60 }, { item: 'orange', price: 300 } ]
+PS D:\Project\Node js\grocery> node grocery add --item=apple --price=30
+welcome on grocery system
+[ { item: 'apple', price: 60 }, { item: 'orange', price: 300 } ]
+PS D:\Project\Node js\grocery> node grocery add --item=apple --price=30
+welcome on grocery system
+[ { item: 'apple', price: 90 }, { item: 'orange', price: 300 } ]
+PS D:\Project\Node js\grocery> node grocery add --item=apple --price=30
+welcome on grocery system
+[ { item: 'apple', price: 120 },
+  { item: 'orange', price: 300 } ]
+PS D:\Project\Node js\grocery> node grocery priceof --item=apple            
+welcome on grocery system
+Ok! above command not found.
+PS D:\Project\Node js\grocery> node grocery priceOf --item=apple
+welcome on grocery system
+price of apple is 150
+PS D:\Project\Node js\grocery> node grocery remove --item=apple
+welcome on grocery system
+[ { item: 'apple', price: 150 },
+  { item: 'orange', price: 300 } ]
+PS D:\Project\Node js\grocery> node grocery add --item=apple --price=30
+welcome on grocery system
+PS D:\Project\Node js\grocery> node grocery print
+welcome on grocery system
+[ { item: 'orange', price: 300 }, { item: 'apple', price: 30 } ]
+PS D:\Project\Node js\grocery>
